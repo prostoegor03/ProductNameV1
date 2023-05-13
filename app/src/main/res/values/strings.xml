@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Product Notes</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="authorize">Войти</string>
+    <string name="Author">Разработчик Маркизов Егор, группа РИБО-02-21</string>
+    <string name="delete">Удалить</string>
+    <string name="CreateNotest">Создать заметку</string>
+    <string name="quantity">Кол-во</string>
+    <string name="product_name">Наименование продукта</string>
+    <string name="Enter_product_name">Введите название списка</string>
+    <string name="ProductName">Название продукта</string>
+    <string name="NotesTitle">Название заметка</string>
+    <string name="ContentTitle">Текст заметка</string>
+    <string name="isBuy">Куплено</string>
+</resources>

@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ProductNotes" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.ProductNotes" parent="Base.Theme.ProductNotes" />
+    
+    <style name="Theme.ProductNotes.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Button.Orange" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+    </style>
+
+    <style name="HomeAddButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="background">@color/dark_oliva</item>
+    </style>
+
+</resources>

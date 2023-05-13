@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/product_conteiner"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    app:cardBackgroundColor="@color/white_milk"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="8dp"
+    app:cardElevation="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:textSize="14sp"
+        android:text="Молоко"
+        android:gravity="center"
+        />
+    <ImageView
+        android:id="@+id/isBuyPicture"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_action_check"
+        android:layout_alignParentEnd="true"/>
+
+     <TextView
+         android:id="@+id/product_quantity"
+         android:layout_width="50dp"
+         android:layout_height="match_parent"
+         android:layout_marginRight="50dp"
+         android:layout_toLeftOf="@+id/isBuyPicture"
+         android:gravity="center"
+         android:padding="8dp"
+         android:text="2л"
+         android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
