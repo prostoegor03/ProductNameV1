@@ -13,4 +13,5 @@
     <string name="NotesTitle">Название заметка</string>
     <string name="ContentTitle">Текст заметка</string>
     <string name="isBuy">Куплено</string>
+    <string name="share">Поделиться</string>
 </resources>

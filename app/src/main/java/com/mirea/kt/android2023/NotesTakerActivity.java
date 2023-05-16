@@ -62,12 +62,13 @@ public class NotesTakerActivity extends AppCompatActivity{
                     Log.i("Create","Отрабатывает создание заметок isOldNote принял значение " + isOldNote);
                     if (!title.isEmpty() && !title.isEmpty()) {
                         Intent intent = new Intent();
-                        Log.i("ExternalValue", "То что прилитело из NotesTakerActivity" + title + " " + content);
+                        Log.i("ExternalValue", "То что сняли с экрана \n" + title
+                                + " \n"+ " Content: " + content);
+
                         intent.putExtra("title", title);
                         intent.putExtra("content", content);
                         setResult(101, intent);
                         Log.i("Create","resultCode 101");
-
                         finish();
                     } else {
                         Toast.makeText(getApplicationContext(), "Поэалуйста заполните поля", Toast.LENGTH_SHORT).show();

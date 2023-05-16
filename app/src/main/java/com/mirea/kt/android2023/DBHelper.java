@@ -17,6 +17,8 @@ public class DBHelper extends SQLiteOpenHelper {
   public static final String COLUMN_ID = "_id";
   public static final String COLUMN_TITLE = "title";
   public static final String COLUMN_CONTENT = "content";
+
+  public static final String COLUMN_TYPE = "type";
   public static final String NOTES = "notes";
 
     public DBHelper(@Nullable Context context) {
@@ -28,7 +30,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + NOTES + " (" + COLUMN_ID
-            + " integer primary key," + COLUMN_TITLE + " text," + COLUMN_CONTENT + " text" + ")");
+            + " integer primary key," + COLUMN_TITLE + " text," + COLUMN_CONTENT + " text," + COLUMN_TYPE + " text" + ")");
     }
 
     @Override
@@ -45,6 +47,7 @@ public class DBHelper extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_TITLE,notes.getTitle());
         cv.put(COLUMN_CONTENT,notes.getContent());
+        cv.put(COLUMN_TYPE,notes.getType());
         db.insert(NOTES ,null,cv);
         db.close();
     }
@@ -70,8 +73,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 int id_id = cursor.getColumnIndex(COLUMN_ID);
                 int id_title = cursor.getColumnIndex(COLUMN_TITLE);
                 int id_content = cursor.getColumnIndex(COLUMN_CONTENT);
+                int id_type = cursor.getColumnIndex(COLUMN_TYPE);
 
-                Notes notes = new Notes(cursor.getString(id_id),cursor.getString(id_title),cursor.getString(id_content));
+                Notes notes = new Notes(cursor.getString(id_id),cursor.getString(id_title),cursor.getString(id_content),cursor.getString(id_type));
                 list.add(notes);
 
             } while (cursor.moveToNext());
@@ -88,6 +92,7 @@ public class DBHelper extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_TITLE,notes.getTitle());
         cv.put(COLUMN_CONTENT,notes.getContent());
+        cv.put(COLUMN_TYPE,notes.getType());
         db.update(NOTES,cv,COLUMN_ID+" = ?",new String[] {id});
         db.close();
     }

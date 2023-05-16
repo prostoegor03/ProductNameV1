@@ -1,5 +1,6 @@
 package com.mirea.kt.android2023;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -24,9 +25,10 @@ public class ProductsCardTakerActivity extends AppCompatActivity {
 
         ProductCardTaker_etCardTitle = findViewById(R.id.ProductCardTaker_etCardTitle);
         ProductCardTaker_etCardQuantity = findViewById(R.id.ProductCardTaker_etCardQuantity);
-
         ic_save_create_product_card = findViewById(R.id.ic_save_create_product_card);
-            Products products = new Products();
+
+
+        Products products = new Products();
             try {
                 String title = getIntent().getStringExtra("title");
                 String quantity = getIntent().getStringExtra("quantity");
@@ -39,8 +41,6 @@ public class ProductsCardTakerActivity extends AppCompatActivity {
             }catch (Exception e){
                 e.printStackTrace();
             }
-
-
 
         ic_save_create_product_card.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +80,5 @@ public class ProductsCardTakerActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 }

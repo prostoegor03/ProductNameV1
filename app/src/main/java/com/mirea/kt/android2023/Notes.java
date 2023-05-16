@@ -6,9 +6,18 @@ public class Notes {
     private String Title;
     private String Content;
 
+    private  String Type;
+
     public Notes(String title, String content) {
         Title = title;
         Content = content;
+    }
+
+    public Notes(String ID, String title, String content, String type) {
+        this.ID = ID;
+        Title = title;
+        Content = content;
+        Type = type;
     }
 
     public Notes(String ID, String title, String content) {
@@ -43,5 +52,13 @@ public class Notes {
 
     public void setID(String ID) {
         this.ID = ID;
+    }
+
+    public String getType() {
+        return Type;
+    }
+
+    public void setType(String type) {
+        Type = type;
     }
 }

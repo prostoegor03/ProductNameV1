@@ -115,6 +115,35 @@ public class ProductsDBHelper extends SQLiteOpenHelper {
         db.close();
         return list;
     }
+    public void removeListBuyID(String conteinerID) {
+        LinkedList<Products> list = new LinkedList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor cursor = db.query(PRODUCTS, null, null, null, null, null, null);
+        if (cursor.moveToFirst()) {
+            do {
+                int id_id = cursor.getColumnIndex(COLUMN_ID);
+                int id_title = cursor.getColumnIndex(COLUMN_TITLE);
+                int id_quantity = cursor.getColumnIndex(COLUMN_QUANTITY);
+                int id_isBuy = cursor.getColumnIndex(COLUMN_BUY);
+                int id_conteinerID = cursor.getColumnIndex(COLUMN_CONTEINERID);
+//                Log.i("ValueCheck ","Инициализация переменных в метоже отработала"
+//                                +cursor.getString(id_title) + "\n"
+//                                +cursor.getString(id_quantity) + "\n"
+//                                +cursor.getString(id_isBuy) + "\n"
+//                                +cursor.getString(id_conteinerID));
+                Log.i("CreateConteinerCheck"," " + cursor.getString(id_conteinerID));
+                if (cursor.getString(id_conteinerID) != null && cursor.getString(id_conteinerID).equals((String) conteinerID)){
+                    removeOne( cursor.getString(id_id));
+                }
+                else {
+                    //Log.i("ValueCheck ","Условие не прошло");
+                    continue;
+                }
+            } while (cursor.moveToNext());
+        }
+        db.close();
+    }
 
     public void updateOne(String id , Products products){
         SQLiteDatabase db = this.getWritableDatabase();

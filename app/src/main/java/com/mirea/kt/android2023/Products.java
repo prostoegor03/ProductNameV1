@@ -1,5 +1,9 @@
 package com.mirea.kt.android2023;
 
+import android.icu.text.CaseMap;
+
+import androidx.annotation.NonNull;
+
 public class Products {
 
     private String ID;
@@ -65,5 +69,16 @@ public class Products {
 
     public void setConteinerID(String conteinerID) {
         this.conteinerID = conteinerID;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        if(!quantitu.isEmpty()){
+            return(title + " " + quantitu + "\n");
+        }
+        else {
+            return(title + "\n");
+        }
     }
 }

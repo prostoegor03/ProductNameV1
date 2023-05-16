@@ -25,6 +25,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@color/white_milk"
+        android:textColor="@color/black"
         android:hint="@string/login"
         android:textSize="32sp"
         android:inputType="text"/>
@@ -40,21 +41,22 @@
         android:layout_marginTop="10dp"
         android:background="@color/white_milk"
         android:hint="@string/password"
+        android:textColor="@color/black"
         android:textSize="32sp"
         android:inputType="textPassword"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnStart"
-
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/inputPass"
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:layout_below="@+id/inputPass"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:shadowRadius="15"
         android:hint="@string/authorize"
+        android:shadowRadius="15"
+        android:textColor="@color/black"
         android:textSize="17sp"
-        />
+        android:backgroundTint="#9d4edd"/>
 
     <TextView
         android:gravity="center"
